@@ -59,6 +59,7 @@ Enabled=false
 Damage=false
 ReloadMax=false
 ```
+To modify skins simply add the `id` of the skin you desire to `SkinList`. All ids can be found [here](https://raw.githubusercontent.com/AzurLaneTools/AzurLaneData/main/EN/ShareCfg/ship_skin_template.json).
 
 ## Credits
 * Library built upon [Android Hooking Patching Template](https://github.com/LGLTeam/Android-Hooking-Patching-Template).
