@@ -2,8 +2,26 @@
 Fancy name for a simple native library that patches Azur Lane scripts.  
 Does not rely on offsets, so game updates shouldn't break it so long as no security measures are introduced.
 
+## Loading the library
+Add the following method to `UnityPlayerActivity`:
+```smali
+.method private static native init(Landroid/content/Context;)V
+.end method
+```
+And these lines to its `onCreate`:
+```smali
+	const-string v0, "Perseus"
+
+    invoke-static {v0}, Ljava/lang/System;->loadLibrary(Ljava/lang/String;)V
+
+    invoke-static {p0}, Lcom/unity3d/player/UnityPlayerActivity;->init(Landroid/content/Context;)V
+```
+(Preferably without replacing other variables, such as between `.locals 2` and `const/4 v0, 0x1`.)
+
 ## Config
-The config file is located on the path `/sdcard/Perseus/`. Comments should make it pretty straightforward.  
+Settings can be found inside `Perseus.ini`, located within the game's external files directory (`/sdcard/Android/data/{package-name}/files/`).  
+If you're unsure of your region's package name, just look it up. All of them include "AzurLane" though.
+
 An example with some values changed:
 ```ini
 # [*] Delete the file to reset it. Restart the game to apply any changes.
@@ -60,7 +78,7 @@ Damage=false
 ReloadMax=false
 ```
 To modify skins simply add the `id` of the skin you desire to `SkinList`. All ids can be found [here](https://raw.githubusercontent.com/AzurLaneTools/AzurLaneData/main/EN/ShareCfg/ship_skin_template.json).  
-**Doesn't work for ships with more than 9 skins**.
+**Some skins do not work due to their id's structure**.
 
 ## Credits
 * Library built upon [Android Hooking Patching Template](https://github.com/LGLTeam/Android-Hooking-Patching-Template).
