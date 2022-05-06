@@ -12,9 +12,9 @@ And these lines to its `onCreate`:
 ```smali
 	const-string v0, "Perseus"
 
-    invoke-static {v0}, Ljava/lang/System;->loadLibrary(Ljava/lang/String;)V
+	invoke-static {v0}, Ljava/lang/System;->loadLibrary(Ljava/lang/String;)V
 
-    invoke-static {p0}, Lcom/unity3d/player/UnityPlayerActivity;->init(Landroid/content/Context;)V
+	invoke-static {p0}, Lcom/unity3d/player/UnityPlayerActivity;->init(Landroid/content/Context;)V
 ```
 (Preferably without replacing other variables, such as between `.locals 2` and `const/4 v0, 0x1`.)
 
