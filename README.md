@@ -2,6 +2,8 @@
 Fancy name for a simple native library that patches Azur Lane scripts.  
 Does not rely on offsets, so game updates shouldn't break it so long as no security measures are introduced.
 
+Feel free to suggest new features.
+
 ## Loading the library
 Add the following method to `UnityPlayerActivity`, anywhere above its `onCreate`:
 ```smali
