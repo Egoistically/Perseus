@@ -28,7 +28,7 @@ An example with some values changed:
 ```ini
 # [*] Delete the file to reset it. Restart the game to apply any changes.
 # [*] Options can be one of the following types:
-#      [1] Bool - e.g. "true" or "false" - Keys: All "Enabled"s, ExerciseGodmode, FastStageMovement, RemoveEquipment and RemoveSkill.
+#      [1] Bool - e.g. "true" or "false" - Keys: All "Enabled"s, ExerciseGodmode, FastStageMovement, RemoveBuffs, RemoveEquipment and RemoveSkill.
 #      [2] Whole numbers or false to disable changes - If you need an example you're five - Keys: All the ones not mentioned above.
 # [*] "Enabled"s apply to the entirety of their section, if they're disabled everything will be.
 # [*] If the game crashes, this file is most likely misconfigured.
@@ -65,8 +65,9 @@ Luck=false
 LuckGrowth=false
 Reload=false
 ReloadGrowth=false
+RemoveBuffs=true
 RemoveEquipment=true
-RemoveSkill=true
+RemoveSkill=false
 Speed=false
 SpeedGrowth=false
 Torpedo=false
@@ -89,4 +90,4 @@ Enabling the Skins mod gives you all skins in-game, as if you had bought them. T
 
 ## Credits
 * Library built upon [Android Hooking Patching Template](https://github.com/LGLTeam/Android-Hooking-Patching-Template).
-* Mods based on [Azur Lane Scripts Autopatcher](https://github.com/n0k0m3/Azur-Lane-Scripts-Autopatcher).
+* Most mods based on [Azur Lane Scripts Autopatcher](https://github.com/n0k0m3/Azur-Lane-Scripts-Autopatcher).
