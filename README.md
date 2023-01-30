@@ -2,8 +2,8 @@
 Fancy name for a simple native library that patches Azur Lane scripts.  
 Does not rely on offsets, so game updates shouldn't break it so long as no security measures are introduced.
 
-**I do not intend to maintain this further. I may (or may not) release the source code in the future, not before rewriting it from scratch though.  
-Feel free to do whatever you wish with it so long as you don't mind getting banned.**
+**I do not intend to maintain this further. The source code can be found in the `src` branch.  
+Feel free to do whatever you wish with it.**
 
 ## Loading the library
 Add the following method to `UnityPlayerActivity`, anywhere above its `onCreate`:
